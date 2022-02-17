@@ -39,4 +39,6 @@ t.stop();
 //printf("\nThe time taken was %f secs\n",t.read());
 printf("\nThe time taken was %llu msecs\n",duration_cast<milliseconds>(t.elapsed_time()).count());
 
+return 0;
 }
+

@@ -16,9 +16,9 @@ unsigned short int equal(float a, float b); //in C, functions must be declared b
 void MVM();
 unsigned short int Compare_MVM();
 
-#define EPSILON 1e-7 //relative error margin
+#define EPSILON 1e-6 //relative error margin
 
-#define N 10
+#define N 1000
 #define TIMES_TO_RUN 1 //how many times the function will run
 
 float A[N][N],Y[N],X[N],Test[N];
