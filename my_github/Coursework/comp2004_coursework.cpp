@@ -51,7 +51,7 @@ unsigned short x_compute[N][M][(2 * C0) + 2];
 unsigned short xy_compute[N][M][(2*C0)+2];
 	
 unsigned char maximum(unsigned char a, unsigned char b);
-
+void inefficient_routine();
 
 
 
@@ -115,7 +115,7 @@ void inefficient_routine()
             if (y >= C0 && y <= M - 1 - C0 && x >= C0 && x <= N - 1 - C0) {
                 x_compute[x][y][0] = 0;
                 for (k = -C0; k <= C0; k++)
-                    x_compute[x][y][1 + k0 + C0] = x_compute[x][y][C0 + k] + input[x + k][y] * Filter[abs(k)];
+                    x_compute[x][y][1 + k + C0] = x_compute[x][y][C0 + k] + input[x + k][y] * Filter[abs(k)];
 
                 x_image[x][y] = x_compute[x][y][(2 * C0) + 1] / total;
             }
@@ -232,7 +232,7 @@ bool compare_images(){
 					return false;
         }
       else
-          if (image_out[x][y] != 0)
+          if (output[x][y] != 0)
 					  return false;
 		
 					
